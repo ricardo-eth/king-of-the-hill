@@ -47,7 +47,8 @@ contract Koth {
       * - blocks_ : set the number of blocks before winning.
       * - tax_ : percentage of the tax for the owner.
       * - seedRestNextRound_ : percentage of what is left in the pot for the new round.
-     * */
+     **/
+     
     constructor(address contractOwner_, uint256 blocks_, uint256 tax_, uint256 seedRestNextRound_) payable {
         require(msg.value >= 1e9, "Koth: The owner must initiate the pot at 1gwei or more");
         require(tax_ >= 0 && tax_ <= 15, "Koth: Invalid percentage");
